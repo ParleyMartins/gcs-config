@@ -72,4 +72,4 @@ sudo sed -i 's/peer/trust/g' /etc/postgresql/9.1/main/pg_hba.conf
 sudo service postgresql restart
 EOF
 
-cp teste-build.sh /var/lib/jenkins/
+cp gcs-config/teste-build.sh /var/lib/jenkins/
