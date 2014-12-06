@@ -60,5 +60,5 @@ sudo sed -i 's/peer/trust/g' /etc/postgresql/9.1/main/pg_hba.conf
 sudo service postgresql restart
 EOF
 
-chmod +x teste-build2.sh
+chmod +x ~/gcs-config/teste-build2.sh
 cp ~/gcs-config/teste-build2.sh /var/lib/jenkins/teste-build2.sh
