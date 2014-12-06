@@ -71,3 +71,5 @@ sudo chef-solo -c solo.rb -j web.json
 sudo sed -i 's/peer/trust/g' /etc/postgresql/9.1/main/pg_hba.conf
 sudo service postgresql restart
 EOF
+
+cp teste-build.sh /var/lib/jenkins/
