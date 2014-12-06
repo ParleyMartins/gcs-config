@@ -19,3 +19,4 @@ user.activate
 EOF
 ./script/production start
 ./script/production stop
+
