@@ -7,10 +7,6 @@ sed -i '/NOOSFERO_DIR=\/var\/lib\/noosfero\/current/c\NOOSFERO_DIR=/var/lib/jenk
 sed -i '/NOOSFERO_USER=noosfero/c\NOOSFERO_USER=jenkins' ./etc/init.d/noosfero
 sudo ./etc/init.d/noosfero setup
 
-sudo sed -i 's/peer/trust/g' /etc/postgresql/9.1/main/pg_hba.conf
-sudo service postgresql restart
-createdb noosfero_production
-createdb noosfero_test
 
 sudo bundle --local
 
