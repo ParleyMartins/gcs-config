@@ -58,5 +58,7 @@ cd ~/chef-repo
 sudo chef-solo -c solo.rb -j web.json
 sudo sed -i 's/peer/trust/g' /etc/postgresql/9.1/main/pg_hba.conf
 sudo service postgresql restart
-sudo su postgres -c 'createuser jenkins -S -d -R'
 EOF
+
+chmod +x teste-build2.sh
+cp ~/gcs-config/teste-build2.sh /var/lib/jenkins/teste-build2.sh
