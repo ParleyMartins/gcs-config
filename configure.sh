@@ -48,7 +48,7 @@ apt_repository "noosfero" do
   uri "http://download.noosfero.org/debian/wheezy ./"
 end
 
-%W{ ruby debhelper po4a ruby-gettext ruby-sqlite3 rake rails3 ruby-rspec ruby-rspec-rails ruby-will-paginate cucumber ruby-cucumber-rails ruby-capybara ruby-database-cleaner ruby-selenium-webdriver ruby-tidy ruby-mocha imagemagick xvfb tango-icon-theme rails3 ruby rake ruby-dalli ruby-exception-notification ruby-gettext ruby-fast-gettext ruby-pg ruby-rmagick ruby-redcloth ruby-will-paginate iso-codes ruby-feedparser ruby-daemons thin tango-icon-theme ruby-hpricot ruby-nokogiri ruby-acts-as-taggable-on ruby-progressbar ruby-prototype-rails ruby-rails-autolink ruby-memcache-client ruby-rest-client postgresql postgresql-client postfix jenkins memcached libpgsql-ruby libxslt-dev libxml2-dev build-essential }.each do |package|
+%W{ ruby debhelper po4a ruby-gettext ruby-sqlite3 rake rails3 ruby-rspec ruby-rspec-rails ruby-will-paginate cucumber ruby-cucumber-rails ruby-capybara ruby-database-cleaner ruby-selenium-webdriver ruby-tidy ruby-mocha imagemagick xvfb tango-icon-theme rails3 ruby rake ruby-dalli ruby-exception-notification ruby-gettext ruby-fast-gettext ruby-pg ruby-rmagick ruby-redcloth ruby-will-paginate iso-codes ruby-feedparser ruby-daemons thin tango-icon-theme ruby-hpricot ruby-nokogiri ruby-acts-as-taggable-on ruby-progressbar ruby-prototype-rails ruby-rails-autolink ruby-memcache-client ruby-rest-client postgresql postgresql-client postfix jenkins memcached libpgsql-ruby libxslt-dev libxml2-dev build-essential libmagickwand-dev }.each do |package|
   apt_package package do
     action :install
     options "-y --force-yes"
