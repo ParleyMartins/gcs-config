@@ -1,0 +1,2 @@
+./script/quick-start
+rake
