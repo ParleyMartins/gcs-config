@@ -1,4 +1,7 @@
-./script/quick-start
+cd ~/chef-repo
+sudo chef-solo -c solo.rb -j web.json
+
+cd $WORKSPACE
 rake
 
 thin -C config/thin.yml -e $WORKSPACE config
@@ -19,4 +22,3 @@ user.activate
 EOF
 ./script/production start
 ./script/production stop
-
