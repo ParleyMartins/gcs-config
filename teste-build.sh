@@ -6,7 +6,7 @@ sed -i '/NOOSFERO_DIR=\/var\/lib\/noosfero\/current/c\NOOSFERO_DIR=/var/lib/jenk
 sed -i '/NOOSFERO_USER=noosfero/c\NOOSFERO_USER=jenkins' ./etc/init.d/noosfero
 sudo ./etc/init.d/noosfero setup
 
-sudo bundle --local
+sudo bundle exec install
 
 echo "production:
   adapter: postgresql
