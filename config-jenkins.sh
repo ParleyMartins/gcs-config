@@ -8,6 +8,13 @@ sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources
 sudo apt-get update
 sudo apt-get install -y git jenkins
 
+wget http://127.0.0.1:8080/jnlpJars/jenkins-cli.jar
+java -jar jenkins-cli.jar -s http://127.0.0.1:8080/ install-plugin Git gitlab-plugin Rake -restart
+java -jar jenkins-cli.jar -s http://127.0.0.1:8080/ create-job noosfero < config.xml
+java -jar jenkins-cli.jar -s http://127.0.0.1:8080/ build noosfero
+sudo service jenkins restart
+
+
 echo -e $BLUE "Adicionando usuário 'jenkins' ao grupo sudo"
 echo "jenkins ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/jenkins
 echo -e $GREEN "Usuário adicionado com sucesso."
@@ -58,6 +65,9 @@ cd ~/chef-repo
 sudo chef-solo -c solo.rb -j web.json
 sudo sed -i 's/peer/trust/g' /etc/postgresql/9.1/main/pg_hba.conf
 sudo service postgresql restart
+
+cd ~/jobs/noosfero/workspace/
+./script/quick-start
 EOF
 
 chmod +x ~/gcs-config/teste-build2.sh
