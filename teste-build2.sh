@@ -6,7 +6,7 @@ rake
 
 thin -C config/thin.yml -e $WORKSPACE config
 
-sed -i "/NOOSFERO_DIR=\/var\/lib\/noosfero\/current/c\NOOSFERO_DIR=$WORKSPACE/noosfero " ./etc/init.d/noosfero
+sed -i "/NOOSFERO_DIR=\/var\/lib\/noosfero\/current/c\NOOSFERO_DIR=$WORKSPACE" ./etc/init.d/noosfero
 sed -i '/NOOSFERO_USER=noosfero/c\NOOSFERO_USER=jenkins' ./etc/init.d/noosfero
 sudo ./etc/init.d/noosfero setup
 
