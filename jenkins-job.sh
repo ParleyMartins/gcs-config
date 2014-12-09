@@ -9,7 +9,6 @@ java -jar jenkins-cli.jar -s http://$LOCAL_IP:8080/ create-job noosfero < ~/gcs-
 java -jar jenkins-cli.jar -s http://$LOCAL_IP:8080/ build noosfero
 sudo service jenkins restart
 
-sleep 5m
 sudo su jenkins <<EOF
 cd ~/jobs/noosfero/workspace/
 ./script/quick-start
