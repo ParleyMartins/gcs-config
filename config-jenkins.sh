@@ -11,15 +11,6 @@ sudo apt-get install -y git jenkins vim
 IPS=$(hostname -I)
 LOCAL_IP=($(echo ${IPS}))
 
-wget http://$LOCAL_IP:8080/jnlpJars/jenkins-cli.jar
-java -jar jenkins-cli.jar -s http://$LOCAL_IP:8080/ install-plugin git
-java -jar jenkins-cli.jar -s http://$LOCAL_IP:8080/ install-plugin gitlab-plugin
-java -jar jenkins-cli.jar -s http://$LOCAL_IP:8080/ install-plugin rake -restart
-java -jar jenkins-cli.jar -s http://$LOCAL_IP:8080/ create-job noosfero < ~/gcs-config/config.xml
-java -jar jenkins-cli.jar -s http://$LOCAL_IP:8080/ build noosfero
-sudo service jenkins restart
-
-
 echo -e $BLUE "Adicionando usuário 'jenkins' ao grupo sudo"
 echo "jenkins ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/jenkins
 echo -e $GREEN "Usuário adicionado com sucesso."
@@ -78,3 +69,11 @@ EOF
 cp ~/gcs-config/teste.sh /var/lib/jenkins/teste.sh
 cp ~/gcs-config/build.sh /var/lib/jenkins/build.sh
 chmod +x /var/lib/jenkins/build.sh /var/lib/jenkins/teste.sh
+
+wget http://$LOCAL_IP:8080/jnlpJars/jenkins-cli.jar
+java -jar jenkins-cli.jar -s http://$LOCAL_IP:8080/ install-plugin git
+java -jar jenkins-cli.jar -s http://$LOCAL_IP:8080/ install-plugin gitlab-plugin
+java -jar jenkins-cli.jar -s http://$LOCAL_IP:8080/ install-plugin rake -restart
+java -jar jenkins-cli.jar -s http://$LOCAL_IP:8080/ create-job noosfero < ~/gcs-config/config.xml
+java -jar jenkins-cli.jar -s http://$LOCAL_IP:8080/ build noosfero
+sudo service jenkins restart
