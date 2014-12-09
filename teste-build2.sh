@@ -10,7 +10,7 @@ sed -i "/NOOSFERO_DIR=\/var\/lib\/noosfero\/current/c\NOOSFERO_DIR=$WORKSPACE" .
 sed -i '/NOOSFERO_USER=noosfero/c\NOOSFERO_USER=jenkins' ./etc/init.d/noosfero
 sudo ./etc/init.d/noosfero setup
 
-export RAILS_ENV=prodution
+export RAILS_ENV=production
 rake db:create
 rake db:schema:load
 rake noosfero:translations:compile >/dev/null 2>&1
