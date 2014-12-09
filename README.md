@@ -4,10 +4,12 @@ Integração contínua e build automatizada Noosfero
 
 
 na sua pasta raiz (~) clone o repositório:
+
 $ git clone https://github.com/ParleyMartins/gcs-config.git
 
 entre na pasta gcs-config e execute o script install-basics (como sudo):
-# ./install-basics.sh
+
+\# ./install-basics.sh
 
 Após isso, espere um pouco e rode o script jenkins-job até obter sucesso (não terá a mensagem no final de que ./script/quick-start não existe). Repita a operação, se necessário. O jenkins demora algum tempo para ‘deixar’ instalar plugins, por isso, ocorrem falhas nas primeiras tentativas. Isso pode levar até 10 minutos ou mais.
 
