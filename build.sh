@@ -16,8 +16,3 @@ a.activate
 EOF
 
 ./script/production start
-nmap -p 3000 localhost > a
-
-sleep 5m
-./script/production stop
-rake db:drop
