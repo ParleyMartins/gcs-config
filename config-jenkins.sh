@@ -8,10 +8,10 @@ sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources
 sudo apt-get update
 sudo apt-get install -y git jenkins vim
 
-wget http://127.0.0.1:8080/jnlpJars/jenkins-cli.jar
-java -jar jenkins-cli.jar -s http://127.0.0.1:8080/ install-plugin Git gitlab-plugin Rake -restart
-java -jar jenkins-cli.jar -s http://127.0.0.1:8080/ create-job noosfero < ~/gcs-config/config.xml
-java -jar jenkins-cli.jar -s http://127.0.0.1:8080/ build noosfero
+wget http://localhost:8080/jnlpJars/jenkins-cli.jar
+java -jar jenkins-cli.jar -s http://localhost:8080/ install-plugin Git gitlab-plugin Rake -restart
+java -jar jenkins-cli.jar -s http://localhost:8080/ create-job noosfero < ~/gcs-config/config.xml
+java -jar jenkins-cli.jar -s http://localhost:8080/ build noosfero
 sudo service jenkins restart
 
 
