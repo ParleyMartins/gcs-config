@@ -75,8 +75,6 @@ cd ~/jobs/noosfero/workspace/
 ./script/quick-start
 EOF
 
-chmod +x ~/gcs-config/teste.sh
 cp ~/gcs-config/teste.sh /var/lib/jenkins/teste.sh
-
-chmod +x ~/gcs-config/build.sh
 cp ~/gcs-config/build.sh /var/lib/jenkins/build.sh
+chmod +x /var/lib/jenkins/build.sh /var/lib/jenkins/teste.sh
