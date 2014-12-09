@@ -8,8 +8,6 @@ export RAILS_ENV=production
 rake db:create
 rake db:schema:load
 rake noosfero:translations:compile >/dev/null 2>&1
-IPS=$(hostname -I)
-LOCAL_IP=($(echo ${IPS}))
 rails c <<EOF
 Environment.create!(:name => 'Noosfero', :contact_email => 'noosfero@localhost.localdomain', :is_default => true)
 Environment.default.domains << Domain.new(:name => IPSocket.getaddress('localhost'))
