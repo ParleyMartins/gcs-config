@@ -6,7 +6,7 @@ COLOR_END="\033[m\n"
 wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
 sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources.list.d/jenkins.list'
 sudo apt-get update
-sudo apt-get install curl git jenkins
+sudo apt-get install -y git jenkins
 
 echo -e $BLUE "Adicionando usuário 'jenkins' ao grupo sudo"
 echo "jenkins ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/jenkins
