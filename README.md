@@ -1,9 +1,13 @@
 Integração contínua e build automatizada Noosfero
 
+====
+
 *Como servidor padrão, será utilizado o apache. Lembre-se de __EDITAR__ o arquivo noosfero (dentro desta pasta), substituindo o ServerName pelo nome (ou ip) do seu servidor*
 
 *Para subir o noosfero em qualquer outro lugar que não seja o jenkins, você deverá editar algumas configurações dos scripts (endereço da pasta onde o noosfero será clonado)*
 
+====
+Instruções:
 
 na sua pasta raiz (~) clone o repositório:
 
