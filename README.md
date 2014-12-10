@@ -12,7 +12,10 @@ $ git clone https://github.com/ParleyMartins/gcs-config.git
 entre na pasta gcs-config e execute o script install-basics (como sudo):
 \# ./install-basics.sh
 
-Após isso, espere um pouco e rode o script jenkins-job até obter sucesso (não terá a mensagem no final de que ./script/quick-start não existe). Repita a operação, se necessário. O jenkins demora algum tempo para ‘deixar’ instalar plugins, por isso, ocorrem falhas nas primeiras tentativas. Isso pode levar até 10 minutos ou mais.
+(A 'hora certa' de seguir adiante é quando o a página http://your-host:8080/pluginManager/available mostra os plugins disponíveis. Enquanto isso não acontece, o jenkins não consegue instalar nenhum plugin, mesmo pela linha de comando)
+$./jenkins-job.sh
+
+A instalação dos plugins será concluída. Espere mais um tempo, enquanto o repositório é clonado (depende da velocidade da sua conexão com a internet) e rode o mesmo script novamente
 $./jenkins-job.sh
 
 Após isso, abra o jenkins na pagina inical http://localhost:8080 e configure os passos da build, seguindo os seguintes passos:
