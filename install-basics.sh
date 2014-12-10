@@ -63,7 +63,7 @@ EOF
 cp ~/gcs-config/teste.sh /var/lib/jenkins/teste.sh
 cp ~/gcs-config/build.sh /var/lib/jenkins/build.sh
 cp ~/gcs-config/destroy-build.sh /var/lib/jenkins/destroy-build.sh
-chmod +x /var/lib/jenkins/build.sh /var/lib/jenkins/teste.sh /var/lib/jenkins/destroy-build.sh ~/gcs-config/config-apache.sh
+cp ~/gcs-config/config-apache.sh /var/lib/jenkins/config-apache.sh
+chmod +x /var/lib/jenkins/build.sh /var/lib/jenkins/teste.sh /var/lib/jenkins/destroy-build.sh /var/lib/jenkins/config-apache.sh
 
 sudo cp  ~/gcs-config/noosfero /etc/apache2/sites-available/noosfero
-~/gcs-config/config-apache.sh
