@@ -1,3 +1,4 @@
+WORKPACE=$(pwd)
 thin -C config/thin.yml -e $WORKSPACE config
 
 sed -i "/NOOSFERO_DIR=\/var\/lib\/noosfero\/current/c\NOOSFERO_DIR=$WORKSPACE" ./etc/init.d/noosfero
