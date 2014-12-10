@@ -64,3 +64,5 @@ cp ~/gcs-config/teste.sh /var/lib/jenkins/teste.sh
 cp ~/gcs-config/build.sh /var/lib/jenkins/build.sh
 cp ~/gcs-config/destroy-build.sh /var/lib/jenkins/destroy-build.sh
 chmod +x /var/lib/jenkins/build.sh /var/lib/jenkins/teste.sh /var/lib/jenkins/destroy-build.sh ~/gcs-config/config-apache.sh
+
+~/gcs-config/config-apache.sh
