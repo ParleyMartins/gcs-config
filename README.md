@@ -26,6 +26,7 @@ $./jenkins-job.sh
 
 
 Após isso, abra o jenkins na pagina inical http://localhost:8080 e configure os passos da build, seguindo os seguintes passos:
+
 1. ~/teste.sh
 2. Invoke Rake (deixe o campo de tasks em branco)
 3. ~/build.sh
