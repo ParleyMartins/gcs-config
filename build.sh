@@ -17,3 +17,4 @@ a.activate
 EOF
 
 ./script/production start
+~/config-apache.sh
